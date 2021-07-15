@@ -29,8 +29,7 @@ Please follow the instructions that are appropriate for you version of Windows.
 
 [Click on this link](https://www.microsoft.com/en-gb/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) and follow the instructions the installer gives.
 
-<!-- Michael to send command over -->
-Once it has been installed type this command `the linux command`
+Once the installation is finished you will need to follow [these steps](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2) to create a Windows Subsystem for Linux.
 
 #### Windows 8
 
@@ -125,6 +124,10 @@ Slack is a chat and collaboration tool. You will use it to:
 ## Google Chrome
 
 The developer tools available in Google Chrome helps with all different scenarios that you will get into during the bootcamp. This is our browser of choice for the bootcamp.
+
+### How to install Chrome
+
+[Click on this link](https://support.google.com/chrome/answer/95346?hl=en-GB&co=GENIE.Platform%3DDesktop) and choose the installer appropriate for your computer (windows or mac). Follow the instructions the installer gives.
 
 ### Chrome Extensions
 
