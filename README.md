@@ -34,18 +34,33 @@ Once the installation is finished you will need to to create a Windows Subsystem
 - Install Windows Subsystem for Linux on Windows 10:
    -  Enable WSL:
       - Open up Windows Powershell as an Administrator(right-click the start menu and select 'Windows Powershell(Admin)'
-      - Paste the following command and run `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+      - Paste the following command and run
+
+         ```
+         dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+         ```
+         
       - Restart your computer
       - Skip to installing linux distribution if system is not compatible with WSL2, WSL1 will be used instead. 
         *Hint*: Check the system requirements for this [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2)
    -  Enable 'Virtual Machine Platform':
       - Open up Windows Powershell as an Administrator(right-click the start menu and select 'Windows Powershell(Admin)'
-      - Paste the following command and run `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
-      - At this point,  restart your machine to complete the installation.
+      - Paste the following command and run
+      
+        ```
+        dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+        ```
+        
+      - Restart your computer to complete the installation.
    -  Download the Linux Kernel Update Package [here](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi). Double-click to run. Select yes when prompted for admin permissions.
    -  Set WSL2 as default
-      - Open up Windows Powershell as an Administrator(right-click the start menu and select 'Windows Powershell(Admin)'
-      - Paste the following command and run `wsl --set-default-version 2`
+      - Open up Windows Powershell as an Administrator(right-click the start menu and select *'Windows Powershell(Admin)'*
+      - Paste the following command and run 
+      
+        ```
+        wsl --set-default-version 2
+        ```
+        
    -  Install a Linux distribution:
       - Install Ubuntu 20.04 LTS from the Microsoft store. You can search for it or use this link [here](https://www.microsoft.com/store/productId/9N6SVWS3RX71)
       - Launch it from from the start menu. Tip: search `Ubuntu` in the start menu.
