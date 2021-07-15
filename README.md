@@ -10,6 +10,7 @@ This guide is to help you setup the following required software during the Black
 1. [Slack](#slack)
 1. [Google Chrome](#google-chrome)
    - [Extensions](#chrome-extensions)
+1. [Configuring a Default Terminal in VS Code](#configuring-a-default-terminal-in-vs-code) **THIS IS FOR WINDOWS USERS ONLY**
 
 **If you haven't already created a [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) account, now is the time to do it.**
 
@@ -138,27 +139,29 @@ This extension allows matching brackets to be identified with colours.
 
 Automatically renames paired HTML tags.
 
-### Configuring a Default Terminal in VSCode
+---
 
--  Open up Visual Studio Code(this can be done from your start menu)
--  Click on the Tab labelled *Terminal* at the top of the VS code window
--  Click on *New Terminal*. This should open up a pane at the bottom part of VS code.
+### Configuring a Default Terminal in VS Code
+
+To make sure the terminal available directly inside VS Code is the terminal you installed and configured in the [windows terminal step](#windows-terminal), you will need to complete the following steps:
+
+- Open Visual Studio Code
+- Click on the Tab labelled *Terminal* at the top of the VS code window
+- Click on *New Terminal*. This should open up a pane at the bottom part of VS code.
 
 ![Terminal Shot](terminal-shot.png) 
 
--  In the bottom window, click the drop-down arrow right beside the plus sign
--  Click *Select Default Profile*. A dialog box displays at the top bar.
+- In the bottom window, click the drop-down arrow right beside the plus sign
+- Click *Select Default Profile*. A dialog box displays at the top bar.
 
 ![default-profile](default-profile-shot.png)
 
--  For windows 10 users:
-      - Select the option that says *Ubuntu-20.04*
+- Select the option that says *Ubuntu-20.04*
 
-      ![Ubuntu-shot](ubuntu-shot.png)
+![Ubuntu-shot](ubuntu-shot.png)
 
--  For Mac users:
-      - Select the option that says *Terminal*
--  Restart VS code
+-  Finally restart VS code
+
 ---
 
 ## Slack
