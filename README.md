@@ -11,9 +11,7 @@ This guide is to help you setup the following required software during the Black
 1. [Google Chrome](#google-chrome)
    - [Extensions](#chrome-extensions)
 
-## Account Registration
-
-If you haven't already created a [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) account, now is the time to do it.
+**If you haven't already created a [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) account, now is the time to do it.**
 
 ---
 
@@ -33,6 +31,17 @@ Once the installation is finished you will need to follow [these steps](https://
 
 #### Windows 8
 
+If you are currently using Windows 8, we recommend you upgrade to Windows 10. To upgrade you must have the following minimum system requirements:
+
+- Latest OS: Make sure you're running the latest version—either Windows 7 SP1 or Windows 8.1 Update.
+- Processor: 1 gigahertz (GHz) or faster processor or SoC.
+- RAM: 1 gigabyte (GB) for 32-bit or 2 GB for 64-bit.
+- Hard disk space: 16 GB for 32-bit OS or 20 GB for 64-bit OS.
+
+To download and install Windows 10, [click here](https://www.microsoft.com/eb-gb/software-download/windows10) and follow the installer instructions.
+
+If you are unable to upgrade to Windows 10 [email us](mailto:tech@blackcodher.com?subject=Windows%208%20upgrade%20issues) straight away and do not proceed with the rest of this guide.
+
 ---
 
 ## Git
@@ -44,13 +53,13 @@ Git is a version control system and will let you:
 
 ### Windows installation
 
-<!-- write something about using the windows terminal -->
+The instructions below mention **Git Bash** and **Windows command prompt**, you shouldn't use either of these and use the [windows terminal](#windows-terminal) you installed above to install git.
 
-[Windows](https://github.com/git-guides/install-git#install-git-on-windows)
+[Windows](https://github.com/git-guides/install-git#install-git-on-windows) - follow the instructions.
 
 ### Mac installation
 
-[Mac](https://github.com/git-guides/install-git#install-git-on-mac)
+[Mac](https://github.com/git-guides/install-git#install-git-on-mac) - follow the instructions.
 
 ---
 
@@ -66,7 +75,7 @@ You will need to install Node not only for the NodeJS unit, but also for React. 
 
 ## Visual Studio Code
 
-Visual Studio Code (VS code) is a source code editor made by Microsoft. It will enable us to write code and can identify errors in the code, and make suggestions.
+Visual Studio Code (VS code) is a source code editor made by Microsoft. It will enable you to write code and can identify errors in the code, and make suggestions.
 
 You will use it to write all your code.
 
@@ -78,17 +87,17 @@ You will use it to write all your code.
 
 There are many extensions in VS Code to can improve your productivity, add some fun into your workspace, and generally aid how you work. Below are some of the key extensions that will help during the course and beyond. If you find other useful extensions don't forget to share with everyone.
 
-You can all the extensions directly from inside VS Code.
-
-<!-- Add screenshot or gif of where to find in VS Code -->
+[You can install all extensions directly from inside VS Code](https://code.visualstudio.com/docs/editor/extension-marketplace#_browse-for-extensions).
 
 #### [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary. In plain English it formats your code to make it consistent, easy to read and well...pretty.
 
+Once prettier has been installed there is some extra configuration to do. [This video](https://www.youtube.com/watch?v=zd_aDbwr4pY) will guide you on how to make prettier format your code eveytime you save a file.
+
 #### [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-Launch a development local Server with live reload feature for static & dynamic pages.
+Launches a development local Server with live reload feature for static & dynamic pages. This will be useful during the JavaScript unit.
 
 #### [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 
@@ -100,7 +109,7 @@ This extension allows matching brackets to be identified with colours.
 
 #### [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 
-Automatically rename paired HTML tags
+Automatically renames paired HTML tags.
 
 ---
 
@@ -110,14 +119,14 @@ Slack is a chat and collaboration tool. You will use it to:
 
 - Keep in touch with each other
 - Ask questions
-- Contact mentors and volunteers
+- Contact mentors, instructors and teaching assistants
 - Build a community
 
 ### How to install Slack
 
-[Windows](https://slack.com/intl/en-gb/help/articles/209038037-Download-Slack-for-Windows)
+[Windows](https://slack.com/intl/en-gb/help/articles/209038037-Download-Slack-for-Windows) - follow the instructions.
 
-[Mac](https://slack.com/intl/en-gb/help/articles/207677868-Download-Slack-for-Mac)
+[Mac](https://slack.com/intl/en-gb/help/articles/207677868-Download-Slack-for-Mac) - follow the instructions.
 
 ---
 
@@ -131,12 +140,12 @@ The developer tools available in Google Chrome helps with all different scenario
 
 ### Chrome Extensions
 
-Below we have also listed some extensions that will enhance make your development experience. If you find other useful extensions don't forget to share with everyone.
+Below we have listed some Chrome extensions that will enhance make your development experience. If you find other useful extensions don't forget to share with everyone.
 
 #### [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
-Adds React debugging tools to the Chrome Developer Tools
+Adds React debugging tools to the Chrome Developer Tools.
 
 #### [Debug CSS](https://chrome.google.com/webstore/detail/debug-css/igiofjnckcagmjgdoaakafngegecjnkj)
 
-Adds outline to all elements on the page to show the culprit element which is changing desired layout
+Adds an outline to all elements on the page to show the culprit element which is changing desired layout.
