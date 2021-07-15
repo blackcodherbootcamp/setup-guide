@@ -24,10 +24,38 @@ The Windows Terminal is a modern, fast, efficient, powerful, and productive term
 Please follow the instructions that are appropriate for you version of Windows.
 
 #### Windows 10
+Installing Windows Terminal:
+[Click on this link](https://www.microsoft.com/en-gb/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) > click Get, then click Install.
+                                                *OR*
+Open up the Microsoft Store and search *Windows Terminal*. Proceed to install this app.
 
-[Click on this link](https://www.microsoft.com/en-gb/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) and follow the instructions the installer gives.
+Once the installation is finished you will need to to create a Windows Subsystem for Linux. Below are the steps to follow. Optionally you can view the more detailed [steps here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2) .
 
-Once the installation is finished you will need to follow [these steps](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2) to create a Windows Subsystem for Linux.
+- Install Windows Subsystem for Linux on Windows 10:
+   -  Enable WSL:
+      - Open up Windows Powershell as an Administrator(right-click the start menu and select 'Windows Powershell(Admin)'
+      - Paste the following command and run `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+      - Restart your computer
+      - Skip to installing linux distribution if system is not compatible with WSL2, WSL1 will be used instead. 
+        *Hint*: Check the system requirements for this [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2)
+   -  Enable 'Virtual Machine Platform':
+      - Open up Windows Powershell as an Administrator(right-click the start menu and select 'Windows Powershell(Admin)'
+      - Paste the following command and run `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
+      - At this point,  restart your machine to complete the installation.
+   -  Download the Linux Kernel Update Package [here](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi). Double-click to run. Select yes when prompted for admin permissions.
+   -  Set WSL2 as default
+      - Open up Windows Powershell as an Administrator(right-click the start menu and select 'Windows Powershell(Admin)'
+      - Paste the following command and run `wsl --set-default-version 2`
+   -  Install a Linux distribution:
+      - Install Ubuntu 20.04 LTS from the Microsoft store. You can search for it or use this link [here](https://www.microsoft.com/store/productId/9N6SVWS3RX71)
+      - Launch it from from the start menu. Tip: search `Ubuntu` in the start menu.
+      - You will be prompted to set a user account and password for the distribution.
+      - Once the setup has been complete, close the window.
+- Configure Windows Terminal to run Ubuntu by default:
+   - Open up Windows Termnial
+   - Click on the down arrow the top bar; click on settings
+   - In the Startup view, click the 'Default Profile' drop-down and select *Ubuntu-20.04*
+   - Click Save at the bottom right of the window and restart your terminal
 
 #### Windows 8
 
