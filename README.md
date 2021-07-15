@@ -139,6 +139,27 @@ This extension allows matching brackets to be identified with colours.
 
 Automatically renames paired HTML tags.
 
+### Configuring a Default Terminal in VSCode
+
+-  Open up Visual Studio Code(this can be done from your start menu)
+-  Click on the Tab labelled *Terminal* at the top of the VS code window
+-  Click on *New Terminal*. This should open up a pane at the bottom part of VS code.
+
+![Terminal Shot](terminal-shot.png) 
+
+-  In the bottom window, click the drop-down arrow right beside the plus sign
+-  Click *Select Default Profile*. A dialog box displays at the top bar.
+
+![default-profile](default-profile-shot.png)
+
+-  For windows 10 users:
+      - Select the option that says *Ubuntu-20.04*
+
+      ![Ubuntu-shot](ubuntu-shot.png)
+
+-  For Mac users:
+      - Select the option that says *Terminal*
+-  Restart VS code
 ---
 
 ## Slack
