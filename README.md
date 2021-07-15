@@ -21,13 +21,12 @@ The Windows Terminal is a modern, fast, efficient, powerful, and productive term
 
 ### How to install Windows Terminal
 
-Please follow the instructions that are appropriate for you version of Windows.
+Please follow the instructions that are appropriate for your version of Windows.
 
 #### Windows 10
-Installing Windows Terminal:
-[Click on this link](https://www.microsoft.com/en-gb/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) > click Get, then click Install.
-                                                *OR*
-Open up the Microsoft Store and search *Windows Terminal*. Proceed to install this app.
+[Click on this link](https://www.microsoft.com/en-gb/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab). Once you are on the page click **Get**, then click Install.
+                                                                                              
+Alternatively, open up the Microsoft Store and search for *Windows Terminal*. Proceed to install this app.
 
 Once the installation is finished you will need to to create a Windows Subsystem for Linux. Below are the steps to follow. Optionally you can view the more detailed [steps here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2) .
 
