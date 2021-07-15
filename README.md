@@ -55,11 +55,11 @@ Git is a version control system and will let you:
 
 The instructions below mention **Git Bash** and **Windows command prompt**, you shouldn't use either of these and use the [windows terminal](#windows-terminal) you installed above to install git.
 
-[Windows](https://github.com/git-guides/install-git#install-git-on-windows) - follow the instructions.
+[Follow the instructions](https://github.com/git-guides/install-git#install-git-on-windows).
 
 ### Mac installation
 
-[Mac](https://github.com/git-guides/install-git#install-git-on-mac) - follow the instructions.
+[Follow the instructions](https://github.com/git-guides/install-git#install-git-on-mac).
 
 ---
 
