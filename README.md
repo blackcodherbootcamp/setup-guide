@@ -156,7 +156,7 @@ Automatically renames paired HTML tags.
 
 ---
 
-### Configuring a Default Terminal in VS Code
+### Configuring a Default Terminal in VS Code(Windows Users Only)
 
 To make sure the terminal available directly inside VS Code is the terminal you installed and configured in the [windows terminal step](#windows-terminal), you will need to complete the following steps:
 
