@@ -40,9 +40,6 @@ Once the installation is finished you will need to to create a Windows Subsystem
          dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
          ```
          
-      - Restart your computer
-      - Skip to installing linux distribution if system is not compatible with WSL2, WSL1 will be used instead. 
-        *Hint*: Check the system requirements for this [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2)
    -  Enable 'Virtual Machine Platform':
       - Open up Windows Powershell as an Administrator(right-click the start menu and select 'Windows Powershell(Admin)'
       - Paste the following command and run
@@ -52,6 +49,7 @@ Once the installation is finished you will need to to create a Windows Subsystem
         ```
         
       - Restart your computer to complete the installation.
+   -  Check if your computer is compatible with WSL2 [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2). Skip downloading and setting wsl2 as default(the next two steps) if it is not compatible, WSL1 will be used instead. 
    -  Download the Linux Kernel Update Package [here](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi). Double-click to run. Select yes when prompted for admin permissions.
    -  Set WSL2 as default
       - Open up Windows Powershell as an Administrator(right-click the start menu and select *'Windows Powershell(Admin)'*
