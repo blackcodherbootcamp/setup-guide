@@ -7,10 +7,11 @@ This guide is to help you setup the following required software during the Black
 1. [Node](#node)
 1. [Visual Studio Code](#visual-studio-code)
    - [Extensions](#extensions)
+1. [Configuring a Default Terminal in VS Code](#configuring-a-default-terminal-in-vs-code) **THIS IS FOR WINDOWS USERS ONLY**
+1. [Setting Up VS Code Extensions For WSL Environment](#setting-up-vs-code-extensions-for-wsl-environment) **THIS IS FOR WINDOWS USERS ONLY**
 1. [Slack](#slack)
 1. [Google Chrome](#google-chrome)
    - [Extensions](#chrome-extensions)
-1. [Configuring a Default Terminal in VS Code](#configuring-a-default-terminal-in-vs-code) **THIS IS FOR WINDOWS USERS ONLY**
 
 **If you haven't already created a [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) account, now is the time to do it.**
 
@@ -19,6 +20,8 @@ This guide is to help you setup the following required software during the Black
 ## Windows Terminal
 
 The Windows Terminal is a modern, fast, efficient, powerful, and productive terminal application. You will be using it to write commands to install software for your projects and run commands to power the applications you will be creating.
+
+**Watch the Guide on [YouTube](https://www.youtube.com/watch?v=wPmwgMm0plk)**
 
 ### How to install Windows Terminal
 
@@ -39,8 +42,8 @@ Once the installation is finished you will need to to create a Windows Subsystem
          ```
          dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
          ```
-         
-   -  Enable 'Virtual Machine Platform':
+
+   - Enable 'Virtual Machine Platform':
       - Open up Windows Powershell as an Administrator(right-click the start menu and select 'Windows Powershell(Admin)'
       - Paste the following command and run
       
@@ -49,9 +52,9 @@ Once the installation is finished you will need to to create a Windows Subsystem
         ```
         
       - Restart your computer to complete the installation.
-   -  Check if your computer is compatible with WSL2 [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2). Skip downloading and setting wsl2 as default(the next two steps) if it is not compatible, WSL1 will be used instead. 
-   -  Download the Linux Kernel Update Package [here](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi). Double-click to run. Select yes when prompted for admin permissions.
-   -  Set WSL2 as default
+   - Check if your computer is compatible with WSL2 [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2). Skip downloading and setting wsl2 as default(the next two steps) if it is not compatible, WSL1 will be used instead. 
+   - Download the Linux Kernel Update Package [here](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi). Double-click to run. Select yes when prompted for admin permissions.
+   - Set WSL2 as default
       - Open up Windows Powershell as an Administrator(right-click the start menu and select *'Windows Powershell(Admin)'*
       - Paste the following command and run 
       
@@ -59,7 +62,7 @@ Once the installation is finished you will need to to create a Windows Subsystem
         wsl --set-default-version 2
         ```
         
-   -  Install a Linux distribution:
+   - Install a Linux distribution:
       - Install Ubuntu 20.04 LTS from the Microsoft store. You can search for it or use this link [here](https://www.microsoft.com/store/productId/9N6SVWS3RX71)
       - Launch it from from the start menu. Tip: search `Ubuntu` in the start menu.
       - You will be prompted to set a user account and password for the distribution.
@@ -124,6 +127,8 @@ You will use it to write all your code.
 
 [Click on this link](https://code.visualstudio.com/download) and choose the installer appropriate for your computer (windows or mac). Follow the instructions the installer gives.
 
+**For Windows Users**: When prompted to Select Additional Tasks during installation, be sure to check the *Add to PATH* option so you can easily open a folder in WSL using the code command.
+
 ### Extensions
 
 There are many extensions in VS Code to can improve your productivity, add some fun into your workspace, and generally aid how you work. Below are some of the key extensions that will help during the course and beyond. If you find other useful extensions don't forget to share with everyone.
@@ -135,6 +140,10 @@ There are many extensions in VS Code to can improve your productivity, add some 
 Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary. In plain English it formats your code to make it consistent, easy to read and well...pretty.
 
 Once prettier has been installed there is some extra configuration to do. [This video](https://www.youtube.com/watch?v=zd_aDbwr4pY) will guide you on how to make prettier format your code eveytime you save a file.
+
+#### [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set.
 
 #### [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
@@ -154,7 +163,7 @@ Automatically renames paired HTML tags.
 
 ---
 
-### Configuring a Default Terminal in VS Code(Windows Users Only)
+### Configuring a Default Terminal in VS Code
 
 To make sure the terminal available directly inside VS Code is the terminal you installed and configured in the [windows terminal step](#windows-terminal), you will need to complete the following steps:
 
@@ -173,7 +182,27 @@ To make sure the terminal available directly inside VS Code is the terminal you 
 
 ![Ubuntu-shot](ubuntu-shot.png)
 
--  Finally restart VS code
+- Finally restart VS code
+
+---
+
+### Setting Up VS Code Extensions For WSL Environment
+
+**Note**: This step should only be done afte the inital setup of VS Code and installing of the extensions listed above.
+
+- Open the Windows Terminal from the Start Menu
+- Type `code .` in the terminal and hit Enter to run. When doing this for the first time, you should see VS Code fetching components needed to run in WSL. This should only take a short while, and is only needed once.
+- After a moment, a new VS Code window will appear, and you'll see a notification that VS Code is opening the folder in WSL. VS Code will now continue to configure itself in WSL and keep you up to date as it makes progress.
+- Once finished, you now see a WSL indicator in the bottom left corner. 
+![WSL VS Code Shot](wslvscodelogo.png)
+- Click on the Extensions Tab on the side bar in the VS Code.
+- Locate the categroy labelled `WSL: UBUNTU-20.04 - INSTALLED` and click the cloud icon that appears on it as shown below:
+
+  ![WSL Extension Category](wslCategory.png)
+- In the popup that appear, tick the first box at the top and then click OK.
+![WSL Extension Pop Up](wslExtensionPopUp.png)
+- The extensions are being installed. Once successful, a pop up box will appear at the bottom right of the VS code window as shown below:
+![WSL Extension Success](wslExtensionSuccess.png)
 
 ---
 
