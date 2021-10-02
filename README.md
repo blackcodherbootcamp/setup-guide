@@ -66,7 +66,8 @@ Once the installation is finished you will need to to create a Windows Subsystem
       - Install Ubuntu 20.04 LTS from the Microsoft store. You can search for it or use this link [here](https://www.microsoft.com/store/productId/9N6SVWS3RX71)
       - Launch it from from the start menu. Tip: search `Ubuntu` in the start menu.
       - You will be prompted to set a user account and password for the distribution.
-      - Once the setup has been complete, close the window.
+      - Once the setup has been complete, run `sudo apt update && sudo apt upgrade` to update the environment.If prompted for any input, type in *y* and hit enter.
+      - Once it has finished running, close the window.
 - Configure Windows Terminal to run Ubuntu by default:
    - Open up Windows Termnial
    - Click on the down arrow the top bar; click on settings
@@ -113,7 +114,18 @@ You will need to install Node not only for the NodeJS unit, but also for React. 
 
 ### How to install node
 
-[Click on this link](https://nodejs.org/en/download/) and choose the installer appropriate for your computer (windows or mac). Follow the instructions the installer gives.
+[Click on this link](https://nodejs.org/en/download/) and choose the installer appropriate for your computer ( mac). Follow the instructions the installer gives.
+
+#### How to Install Node in WSL (Windows Users Only)
+
+**Prerequisite**: Before performing the steps listed below, you should have completed the setup on ![Windows Terminal](#windows-terminal).
+
+- Open up Windows Terminal from the start menu
+- Install Node Version Manager(nvm) by running: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
+- Close the current terminal and reopen it.
+- Verify that the installation was successful by running: `nvm --version`. It should display a version number. If you receive 'command not found' or no response at all, restart the terminal and rerun the installation.
+- Install the latest stable LTS release of Node.js by running: `nvm install --lts`
+- Afterwards, verify the Node and Node package manager(npm) installation by running: `node --version` and `npm --version` respectively. Both commands should display decimal numbers e.g. `v14.18.0` or `6.14.15`
 
 ---
 
