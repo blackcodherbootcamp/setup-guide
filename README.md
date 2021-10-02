@@ -5,6 +5,7 @@ This guide is to help you setup the following required software during the Black
 1. [Windows Terminal](#windows-terminal) **THIS IS FOR WINDOWS USERS ONLY**
 1. [Setup Home Path Alias](#setup-home-path-alias-in-windows-terminal) **THIS IS FOR WINDOWS USERS ONLY**
 1. [Git](#git)
+   - [Setup SSH Keys for GitLab](#setup-ssh-keys-for-gitlab)
 1. [Node](#node)
 1. [Visual Studio Code](#visual-studio-code)
    - [Extensions](#extensions)
@@ -114,7 +115,7 @@ The instructions below mention **Git Bash** and **Windows command prompt**, you 
 
 [Follow the instructions](https://github.com/git-guides/install-git#install-git-on-windows).
 
-**Setup Git Credential Manager**
+**Setup Git Credential Manager Core (Windows Users Only)**
 
 *Note: Proceed with this step only after installing Git*
 
@@ -131,6 +132,22 @@ Git Credential Manager (GCM) Core enables you to authenticate a remote Git serve
 
 ## Setup SSH Keys for GitHub
 
+- Open Terminal
+
+- Run the following code, substituting in your GitHub email address in the last placeholder: `ssh-keygen -t ed25519 -C "your_github_email@email.com"`
+
+- When you're prompted to "Enter a file in which to save the key," press Enter to save the file in the default location. Note the default location as shown in the image below:
+![defaultLocation](sshSetup.png)
+
+- When prompted, type a secure passphrase. Note down the passphrase for use later.
+
+- Once that is successful, run `cat /Users/you/.ssh/id_ed25519.pub`. Replace `/Users/you/.ssh/id_ed25519` with the default location shown earlier in step 3. Take note of the output.
+
+- Navigate to your GitHub profile and go to settings. Click on the Tab named "SSH and GPG keys"> Click 'New SSH Key'
+
+- In the box labelled Key, input the output you got from step 5 and then input a title. This could be just the device you are working on .e.g 'My Silver Mac'.
+
+- Finally, click 'Add SSH Key'
 
 ## Node
 
