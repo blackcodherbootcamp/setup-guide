@@ -114,11 +114,23 @@ The instructions below mention **Git Bash** and **Windows command prompt**, you 
 
 [Follow the instructions](https://github.com/git-guides/install-git#install-git-on-windows).
 
+**Setup Git Credential Manager**
+
+*Note: Proceed with this step only after installing Git*
+
+Git Credential Manager (GCM) Core enables you to authenticate a remote Git server, even if you have a complex authentication pattern like two-factor authentication, or using SSH remote URLs that require an SSH key password for every Git push.
+
+- Open up Windows Terminal
+- Enter this command and run: `git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"`
+
 ### Mac installation
 
 [Follow the instructions](https://github.com/git-guides/install-git#install-git-on-mac).
 
 ---
+
+## Setup SSH Keys for GitHub
+
 
 ## Node
 
