@@ -3,6 +3,7 @@
 This guide is to help you setup the following required software during the Black Codher bootcamp.
 
 1. [Windows Terminal](#windows-terminal) **THIS IS FOR WINDOWS USERS ONLY**
+1. [Setup Home Path Alias](#setup-home-path-alias-in-windows-terminal) **THIS IS FOR WINDOWS USERS ONLY**
 1. [Git](#git)
 1. [Node](#node)
 1. [Visual Studio Code](#visual-studio-code)
@@ -89,6 +90,17 @@ If you are unable to upgrade to Windows 10 [email us](mailto:tech@blackcodher.co
 
 ---
 
+## Setup Home Path Alias in Windows Terminal
+
+**Prerequisite**: Ensure that before attempting this tasks, you have setup [Windows Terminal](#windows-terminal)
+
+- Open up windows Terminal
+- Run `pwd` and take note of the output
+- Run `echo "alias home='cd <mount directory path>'" >> ~/.bash_aliases where <mount directory path>`, replacing `<mount directory path>` with the output you received from running `pwd`.
+- Run `source ~/.bashrc`
+
+---
+
 ## Git
 
 Git is a version control system and will let you:
@@ -118,7 +130,7 @@ You will need to install Node not only for the NodeJS unit, but also for React. 
 
 #### How to Install Node in WSL (Windows Users Only)
 
-**Prerequisite**: Before performing the steps listed below, you should have completed the setup on ![Windows Terminal](#windows-terminal).
+**Prerequisite**: Before performing the steps listed below, you should have completed the setup on [Windows Terminal](#windows-terminal).
 
 - Open up Windows Terminal from the start menu
 - Install Node Version Manager(nvm) by running: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
