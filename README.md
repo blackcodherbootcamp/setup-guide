@@ -6,6 +6,7 @@ This guide is to help you setup the following required software during the Black
 1. [Setup Home Path Alias](#setup-home-path-alias-in-windows-terminal) **THIS IS FOR WINDOWS USERS ONLY**
 1. [Git](#git)
    - [Setup SSH Keys for GitLab](#setup-ssh-keys-for-gitlab)
+   - [Configure Default Branch for Git Init](#configure-default-branch-for-git-init)
 1. [Node](#node)
 1. [Visual Studio Code](#visual-studio-code)
    - [Extensions](#extensions)
@@ -148,6 +149,24 @@ Git Credential Manager (GCM) Core enables you to authenticate a remote Git serve
 - In the box labelled Key, input the output you got from step 5 and then input a title. This could be just the device you are working on .e.g 'My Silver Mac'.
 
 - Finally, click 'Add SSH Key'
+
+### Configure Default Branch for Git Init
+
+- Verify your version of Git by running `git --version`
+If your version number is below 2.28, then proceed with the steps below. Otherwise, skip to the steps under Version 2.28.
+
+#### Below Version 2.28
+- Download the `script.sh` file from [here]()
+- Open the Windows Terminal
+- Run `cd Downloads` and then run `./script.sh`
+- You should receive the following output or something similar:
+![Script Output](scriptOutput.png)
+
+#### Version 2.28 and above
+- Run `git config --global init.defaultBranch main`
+- Close the Terminal.
+
+
 
 ## Node
 
