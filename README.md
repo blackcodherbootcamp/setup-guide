@@ -156,7 +156,7 @@ Git Credential Manager (GCM) Core enables you to authenticate a remote Git serve
 If your version number is below 2.28, then proceed with the steps below. Otherwise, skip to the steps under Version 2.28.
 
 #### Below Version 2.28
-- Download the `script.sh` file from <a href="https://raw.githubusercontent.com/blackcodherbootcamp/setup-guide/fix-%232/script.sh" download>here</a>
+- Download the `script.sh` file from [here]()
 - Open the Windows Terminal
 - Run `cd Downloads` and then run `./script.sh`
 - You should receive the following output or something similar:
