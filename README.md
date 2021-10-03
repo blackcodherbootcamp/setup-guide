@@ -172,7 +172,7 @@ You will need to install Node not only for the NodeJS unit, but also for React. 
 
 ### How to install node
 
-[Click on this link](https://nodejs.org/en/download/) and choose the installer appropriate for your computer ( mac). Follow the instructions the installer gives.
+[Click on this link](https://nodejs.org/en/download/) and choose the installer appropriate for your computer (mac). Follow the instructions the installer gives.
 
 #### How to Install Node in WSL (Windows Users Only)
 
