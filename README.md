@@ -5,7 +5,7 @@ This guide is to help you setup the following required software during the Black
 1. [Windows Terminal](#windows-terminal) **THIS IS FOR WINDOWS USERS ONLY**
 1. [Setup Home Path Alias](#setup-home-path-alias-in-windows-terminal) **THIS IS FOR WINDOWS USERS ONLY**
 1. [Git](#git)
-   - [Setup SSH Keys for GitLab](#setup-ssh-keys-for-gitlab)
+   - [Setup SSH Keys for GitHub](#setup-ssh-keys-for-github)
    - [Configure Default Branch for Git Init](#configure-default-branch-for-git-init)
 1. [Node](#node)
 1. [Visual Studio Code](#visual-studio-code)
@@ -165,8 +165,6 @@ If your version number is below 2.28, then proceed with the steps below. Otherwi
 #### Version 2.28 and above
 - Run `git config --global init.defaultBranch main`
 - Close the Terminal.
-
-
 
 ## Node
 
