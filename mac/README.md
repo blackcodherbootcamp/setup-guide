@@ -3,6 +3,8 @@
 This guide is to help you setup the following required software during the Black Codher bootcamp for Mac OS.
 
 1. [Git](#git)
+   - [Setup SSH Keys for GitHub](#setup-ssh-keys-for-github)
+   - [Configure Default Branch for Git Init](#configure-default-branch-for-git-init)
 1. [Node](#node)
 1. [Visual Studio Code](#visual-studio-code)
    - [Extensions](#extensions)
@@ -24,6 +26,43 @@ Git is a version control system and will let you:
 [Follow these installation instructions](https://github.com/git-guides/install-git#install-git-on-mac).
 
 ---
+
+## Setup SSH Keys for GitHub
+
+1. Open Terminal
+
+1. Run the following code, substituting in your GitHub email address in the last placeholder: `ssh-keygen -t ed25519 -C "your_github_email@email.com"`
+
+1. When you're prompted to "Enter a file in which to save the key," press Enter to save the file in the default location. Note the default location as shown in the image below:
+![defaultLocation](sshSetup.png)
+
+1. When prompted, type a secure passphrase. Note down the passphrase for use later.
+
+1. Once that is successful, run `cat /Users/you/.ssh/id_ed25519.pub`. Replace `/Users/you/.ssh/id_ed25519` with the default location shown earlier in step 3. Take note of the output.
+
+1. Navigate to your GitHub profile and go to settings. Click on the Tab named "SSH and GPG keys"> Click 'New SSH Key'
+
+1. In the box labelled Key, input the output you got from step 5 and then input a title. This could be just the device you are working on .e.g 'My Silver Mac'.
+
+1. Finally, click 'Add SSH Key'
+
+### Configure Default Branch for Git Init
+
+- Verify your version of Git by running `git --version`
+If your version number is below 2.28, then proceed with the steps below. Otherwise, skip to the steps under Version 2.28.
+
+#### Below Version 2.28
+
+- Open the Terminal
+- Download the configure script by running: `wget https://raw.githubusercontent.com/blackcodherbootcamp/setup-guide/main/script.sh`
+- Then run `./script.sh`
+- You should receive the following output or something similar:
+![Script Output](scriptOutput.png)
+
+#### Version 2.28 and above
+
+- Run `git config --global init.defaultBranch main`
+- Close the Terminal.
 
 ## Node
 

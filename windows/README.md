@@ -3,11 +3,15 @@
 This guide is to help you setup the following required software during the Black Codher bootcamp for Windows.
 
 1. [Windows Terminal](#windows-terminal)
+1. [Setup Home Path Alias](#setup-home-path-alias-in-windows-terminal)
 1. [Git](#git)
+   - [Setup SSH Keys for GitHub](#setup-ssh-keys-for-github)
+   - [Configure Default Branch for Git Init](#configure-default-branch-for-git-init)
 1. [Node](#node)
 1. [Visual Studio Code](#visual-studio-code)
    - [Extensions](#extensions)
 1. [Configuring a Default Terminal in VS Code](#configuring-a-default-terminal-in-vs-code)
+1. [Setting Up VS Code Extensions For WSL Environment](#setting-up-vs-code-extensions-for-wsl-environment)
 1. [Discord](#discord)
 1. [Google Chrome](#google-chrome)
    - [Extensions](#chrome-extensions)
@@ -19,6 +23,8 @@ This guide is to help you setup the following required software during the Black
 ## Windows Terminal
 
 The Windows Terminal is a modern, fast, efficient, powerful, and productive terminal application. You will be using it to write commands to install software for your projects and run commands to power the applications you will be creating.
+
+Watch the Guide on [YouTube](https://www.youtube.com/watch?v=wPmwgMm0plk)
 
 ### How to install Windows Terminal
 
@@ -92,6 +98,17 @@ If you are unable to upgrade to Windows 10 [email us](mailto:tech@blackcodher.co
 
 ---
 
+## Setup Home Path Alias in Windows Terminal
+
+**Prerequisite**: Ensure that before attempting this tasks, you have setup [Windows Terminal](#windows-terminal)
+
+- Open up windows Terminal
+- Run `pwd` and take note of the output
+- Run `echo "alias home='cd <mount directory path>'" >> ~/.bash_aliases where <mount directory path>`, replacing `<mount directory path>` with the output you received from running `pwd`.
+- Run `source ~/.bashrc`
+
+---
+
 ## Git
 
 Git is a version control system and will let you:
@@ -103,15 +120,68 @@ The instructions below mention **Git Bash** and **Windows command prompt**, you 
 
 [Follow the instructions](https://github.com/git-guides/install-git#install-git-on-windows).
 
+**Setup Git Credential Manager Core (Windows Users Only)**
+
+*Note: Proceed with this step only after installing Git*
+
+Git Credential Manager (GCM) Core enables you to authenticate a remote Git server, even if you have a complex authentication pattern like two-factor authentication, or using SSH remote URLs that require an SSH key password for every Git push.
+
+- Open up Windows Terminal
+- Enter this command and run: `git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"`
+
 ---
+
+## Setup SSH Keys for GitHub
+
+1. Open Terminal
+
+1. Run the following code, substituting in your GitHub email address in the last placeholder: `ssh-keygen -t ed25519 -C "your_github_email@email.com"`
+
+1. When you're prompted to "Enter a file in which to save the key," press Enter to save the file in the default location. Note the default location as shown in the image below:
+![defaultLocation](sshSetup.png)
+
+1. When prompted, type a secure passphrase. Note down the passphrase for use later.
+
+1. Once that is successful, run `cat /Users/you/.ssh/id_ed25519.pub`. Replace `/Users/you/.ssh/id_ed25519` with the default location shown earlier in step 3. Take note of the output.
+
+1. Navigate to your GitHub profile and go to settings. Click on the Tab named "SSH and GPG keys"> Click 'New SSH Key'
+
+1. In the box labelled Key, input the output you got from step 5 and then input a title. This could be just the device you are working on .e.g 'My Silver Mac'.
+
+1. Finally, click 'Add SSH Key'
+
+### Configure Default Branch for Git Init
+
+- Verify your version of Git by running `git --version`
+If your version number is below 2.28, then proceed with the steps below. Otherwise, skip to the steps under Version 2.28.
+
+#### Below Version 2.28
+
+- Open the Terminal
+- Download the configure script by running: `wget https://raw.githubusercontent.com/blackcodherbootcamp/setup-guide/main/script.sh`
+- Then run `./script.sh`
+- You should receive the following output or something similar:
+![Script Output](scriptOutput.png)
+
+#### Version 2.28 and above
+
+- Run `git config --global init.defaultBranch main`
+- Close the Terminal.
 
 ## Node
 
 You will need to install Node not only for the NodeJS unit, but also for React. By installing Node you can use its a [package manager](https://en.wikipedia.org/wiki/Package_manager) (Node Package Manager or `npm`) to install other software that you will use in your projects later in the course.
 
-### How to install node
+### How to Install Node in WSL
 
-[Click on this link](https://nodejs.org/en/download/), choose the windows installer and follow the instructions the it gives.
+**Prerequisite**: Before performing the steps listed below, you should have completed the setup on [Windows Terminal](#windows-terminal).
+
+- Open up Windows Terminal from the start menu
+- Install Node Version Manager(nvm) by running: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
+- Close the current terminal and reopen it.
+- Verify that the installation was successful by running: `nvm --version`. It should display a version number. If you receive 'command not found' or no response at all, restart the terminal and rerun the installation.
+- Install the latest stable LTS release of Node.js by running: `nvm install --lts`
+- Afterwards, verify the Node and Node package manager(npm) installation by running: `node --version` and `npm --version` respectively. Both commands should display decimal numbers e.g. `v14.18.0` or `6.14.15`
 
 ---
 
@@ -137,6 +207,10 @@ Prettier is an opinionated code formatter. It enforces a consistent style by par
 
 Once prettier has been installed there is some extra configuration to do. [This video](https://www.youtube.com/watch?v=zd_aDbwr4pY) will guide you on how to make prettier format your code eveytime you save a file.
 
+#### [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set.
+
 #### [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 Launches a development local Server with live reload feature for static & dynamic pages. This will be useful during the JavaScript unit.
@@ -160,21 +234,41 @@ Automatically renames paired HTML tags.
 To make sure the terminal available directly inside VS Code is the terminal you installed and configured in the [windows terminal step](#windows-terminal), you will need to complete the following steps:
 
 - Open Visual Studio Code
-- Click on the Tab labelled _Terminal_ at the top of the VS code window
-- Click on _New Terminal_. This should open up a pane at the bottom part of VS code.
+- Click on the Tab labelled *Terminal* at the top of the VS code window
+- Click on *New Terminal*. This should open up a pane at the bottom part of VS code.
 
 ![Terminal Shot](terminal-shot.png)
 
 - In the bottom window, click the drop-down arrow right beside the plus sign
-- Click _Select Default Profile_. A dialog box displays at the top bar.
+- Click *Select Default Profile*. A dialog box displays at the top bar.
 
 ![default-profile](default-profile-shot.png)
 
-- Select the option that says _Ubuntu-20.04_
+- Select the option that says *Ubuntu-20.04*
 
 ![Ubuntu-shot](ubuntu-shot.png)
 
 - Finally restart VS code
+
+---
+
+### Setting Up VS Code Extensions For WSL Environment
+
+**Note**: This step should only be done afte the inital setup of VS Code and installing of the extensions listed above.
+
+- Open the Windows Terminal from the Start Menu
+- Type `code .` in the terminal and hit Enter to run. When doing this for the first time, you should see VS Code fetching components needed to run in WSL. This should only take a short while, and is only needed once.
+- After a moment, a new VS Code window will appear, and you'll see a notification that VS Code is opening the folder in WSL. VS Code will now continue to configure itself in WSL and keep you up to date as it makes progress.
+- Once finished, you now see a WSL indicator in the bottom left corner.
+![WSL VS Code Shot](wslvscodelogo.png)
+- Click on the Extensions Tab on the side bar in the VS Code.
+- Locate the categroy labelled `WSL: UBUNTU-20.04 - INSTALLED` and click the cloud icon that appears on it as shown below:
+
+  ![WSL Extension Category](wslCategory.png)
+- In the popup that appear, tick the first box at the top and then click OK.
+![WSL Extension Pop Up](wslExtensionPopUp.png)
+- The extensions are being installed. Once successful, a pop up box will appear at the bottom right of the VS code window as shown below:
+![WSL Extension Success](wslExtensionSuccess.png)
 
 ---
 
