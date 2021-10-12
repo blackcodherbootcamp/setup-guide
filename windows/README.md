@@ -104,7 +104,7 @@ If you are unable to upgrade to Windows 10 [email us](mailto:tech@blackcodher.co
 
 - Open up windows Terminal
 - Run `pwd` and take note of the output
-- Run `echo "alias home='cd <mount directory path>'" >> ~/.bash_aliases where <mount directory path>`, replacing `<mount directory path>` with the output you received from running `pwd`.
+- Run `echo "alias home='cd <mount directory path>'" >> ~/.bash_aliases`, replacing `<mount directory path>` with the output you received from running `pwd`.
 - Run `source ~/.bashrc`
 
 ---
