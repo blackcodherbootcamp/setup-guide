@@ -159,6 +159,7 @@ If your version number is below 2.28, then proceed with the steps below. Otherwi
 
 - Open the Terminal
 - Download the configure script by running: `wget https://raw.githubusercontent.com/blackcodherbootcamp/setup-guide/main/script.sh`
+- Run `chmod +x script.sh`
 - Then run `./script.sh`
 - You should receive the following output or something similar:
 ![Script Output](scriptOutput.png)
