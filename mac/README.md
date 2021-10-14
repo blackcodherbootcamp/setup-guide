@@ -1,6 +1,6 @@
 # Mac setup guide
 
-This guide is to help you setup the following required software during the Black Codher bootcamp for Mac OS.
+This guide is to help you setup the following required software during the Black Codher bootcamp for Mac OS. Read the instructions for each application *in full* before proceeding to commence installation.
 
 1. [Git](#git)
    - [Setup SSH Keys for GitHub](#setup-ssh-keys-for-github)
@@ -13,6 +13,13 @@ This guide is to help you setup the following required software during the Black
    - [Extensions](#chrome-extensions)
 
 **If you haven't already created a [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) account, now is the time to do it.**
+
+**IMPORTANT**
+
+When downloading and installing applications from the internet, macOS may block their execution with a message like this:
+![Blocked Application](BlockedApp.png)
+
+To get around this, right-click the file you're trying to run and select "Open". When a second dialog is displayed asking if you're sure you want to open the file, click "Open". After this, double-clicking the file should open it as usual. See the [macOS support article](https://support.apple.com/en-gb/guide/mac-help/mh40616/mac) for more details.
 
 ---
 
@@ -53,11 +60,12 @@ If your version number is below 2.28, then proceed with the steps below. Otherwi
 
 #### Below Version 2.28
 
-- Open the Terminal
-- Download the configure script by running: `wget https://raw.githubusercontent.com/blackcodherbootcamp/setup-guide/main/script.sh`
-- Then run `./script.sh`
-- You should receive the following output or something similar:
-![Script Output](scriptOutput.png)
+- Navigate to the [Git installer downloads page](https://sourceforge.net/projects/git-osx-installer/files/) and download the latest version (first item in the list)
+- Open the downloaded archive
+- Double-click the package icon to run the installer
+- Click "Continue", then "Install". Once installation is completed, click "OK".
+- You may confirm the updated version is installed by running `git --version`, then continue with the instructions below.
+
 
 #### Version 2.28 and above
 
