@@ -177,7 +177,9 @@ You will need to install Node not only for the NodeJS unit, but also for React. 
 **Prerequisite**: Before performing the steps listed below, you should have completed the setup on [Windows Terminal](#windows-terminal).
 
 - Open up Windows Terminal from the start menu
-- Install Node Version Manager(nvm) by running: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
+- Update `apt`: `sudo apt update && sudo apt upgrade`
+- Ensure you have the latest version of `curl`: `sudo apt-get install curl`
+- Install Node Version Manager(nvm) by running: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
 - Close the current terminal and reopen it.
 - Verify that the installation was successful by running: `nvm --version`. It should display a version number. If you receive 'command not found' or no response at all, restart the terminal and rerun the installation.
 - Install the latest stable LTS release of Node.js by running: `nvm install --lts`
