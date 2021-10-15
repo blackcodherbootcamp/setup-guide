@@ -104,7 +104,7 @@ If you are unable to upgrade to Windows 10 [email us](mailto:tech@blackcodher.co
 
 - Open up windows Terminal
 - Run `pwd` and take note of the output
-- Run `echo "alias home='cd <mount directory path>'" >> ~/.bash_aliases where <mount directory path>`, replacing `<mount directory path>` with the output you received from running `pwd`.
+- Run `echo "alias home='cd <mount directory path>'" >> ~/.bash_aliases`, replacing `<mount directory path>` with the output you received from running `pwd`.
 - Run `source ~/.bashrc`
 
 ---
@@ -159,6 +159,7 @@ If your version number is below 2.28, then proceed with the steps below. Otherwi
 
 - Open the Terminal
 - Download the configure script by running: `wget https://raw.githubusercontent.com/blackcodherbootcamp/setup-guide/main/script.sh`
+- Run `chmod +x script.sh`
 - Then run `./script.sh`
 - You should receive the following output or something similar:
 ![Script Output](scriptOutput.png)
