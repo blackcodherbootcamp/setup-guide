@@ -1,6 +1,15 @@
 # Mac setup guide
 
-This guide is to help you setup the following required software during the Black Codher bootcamp for Mac OS. Read the instructions for each application *in full* before proceeding to commence installation.
+This guide is to help you setup the following required software during the Black Codher bootcamp for Mac OS. Read the instructions for each application *in full* before proceeding to commence installation. 
+
+Many of the steps will require you to use a command-line interface (also referred to as a _CLI_, _terminal_ or _shell_), which you may not be familiar with. Please note the following:
+
+- You can't use a mouse or trackpad inside a terminal, except to scroll and execute clipboard operations like selecting, copying and pasting text. The text cursor can only be controlled using the arrow keys on your keyboard.
+- Where passwords must be entered, you won't see the text you're typing displayed onscreen, but your keystrokes will be input as nornal. This is expected behaviour, so be careful when entering secure text and if you think you've made a mistake, hit the backspace key until an audible alert lets you know that you've cleared all the input.
+- Where a command is provided, you will run it by typing or pasting it in and then hitting Return/Enter on your keyboard.
+- When a given command contains text in angle brackets, e.g. `echo "alias home='cd <mount directory path>'" >> ~/.bash_aliases`, this represents a placeholder that you **must** replace with the correct value for your environment. Instructions will be provided to tell you what the placeholder should be replaced with.
+
+## Table of Contents
 
 1. [Git](#git)
    - [Setup SSH Keys for GitHub](#setup-ssh-keys-for-github)
@@ -12,7 +21,7 @@ This guide is to help you setup the following required software during the Black
 1. [Google Chrome](#google-chrome)
    - [Extensions](#chrome-extensions)
 
-**If you haven't already created a [GitHub](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) account, now is the time to do it.**
+**If you haven't already created a [GitHub](https://github.com/signup) account, now is the time to do it.**
 
 **IMPORTANT**
 
