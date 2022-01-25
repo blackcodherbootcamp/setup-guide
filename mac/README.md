@@ -43,7 +43,7 @@ Git is a version control system and will let you:
 
 ---
 
-## Setup SSH Keys for GitHub
+### Setup SSH Keys for GitHub
 
 1. Open Terminal
 
@@ -54,11 +54,17 @@ Git is a version control system and will let you:
 
 1. When prompted, type a secure passphrase. Note down the passphrase for use later.
 
-1. Once that is successful, run `cat /Users/you/.ssh/id_ed25519.pub`. Replace `/Users/you/.ssh/id_ed25519` with the default location shown earlier in step 3. Take note of the output.
+1. Add your key to the `ssh-agent` by following [Steps 1-3](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
+
+### Add SSH Key to GitHub
+
+[Follow these installation instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or the following steps:
+
+1. Run `pbcopy < <defaultLocation>.pub`, which will copy the public key to your clipboard. If `pbcopy` doesn't work, execute `cat <defaultLocation>.pub` and copy the output manually, ensuring you don't capture any extra whitespace or linebreaks at the end of the text. Whichever command you use, replace `<defaultLocation>` with the default location shown earlier in step 3.
 
 1. Navigate to your GitHub profile and go to settings. Click on the Tab named "SSH and GPG keys"> Click 'New SSH Key'
 
-1. In the box labelled Key, input the output you got from step 5 and then input a title. This could be just the device you are working on .e.g 'My Silver Mac'.
+1. In the box labelled Key, paste the output you copied from step 6 and then input a title. This could be just the device you are working on .e.g 'My Silver Mac'.
 
 1. Finally, click 'Add SSH Key'
 
