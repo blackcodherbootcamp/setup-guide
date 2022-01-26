@@ -16,3 +16,9 @@ Once you've confirmed your files transferred successfully and your projects are 
 Any questions or issues, just post a reply in the thread. 
 
 **Note:** *To access your files from the Windows File Explorer, navigate to \\WSL$\Ubuntu-[Ubuntu version]\home\[WSL username]: \\WSL$\Ubuntu-20.04\home\hael You may find it helpful to pin this directory for easy access.*
+
+## React Not Restarting
+
+Many of you running on Windows may have found that your React app doesn't auto-reload when you save changes as expected; if that's the case, the solution is to create a file called `.env` in your project folder and paste the following into it: `CHOKIDAR_USEPOLLING=true`
+
+*NOTE*: You'll need to repeat this step for any other create-react-app projects you work on.

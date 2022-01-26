@@ -9,4 +9,4 @@ There is a guide for Windows user and a guide for Mac users. Use the guide that 
 
 Refer to this optimisation guide below if you run into trouble during the course of the bootcamp:
 
-- [Optimisation guide](optimisation)
+- [Optimisation guide](optimisations)
