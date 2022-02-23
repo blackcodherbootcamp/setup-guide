@@ -10,9 +10,16 @@ For all Windows users, we have a final solution to the performance issues experi
 2. Ensure you're in your Linux home directory: `cd ~`
 3. Copy files from Windows to linux: `rsync -azh --info=progress2 --exclude='node_modules' /mnt/c/[path to blackcodher folder] .` e.g. `rsync -azh --info=progress2 --exclude='node_modules' /mnt/c/Users/gary/Documents/blackcodher .`
 4. Open up VS Code: Run `code .`
-5. Esnure the 'Remote-WSL' extension is installed in VS Code or install it using this link: <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl>
+5. Ensure the 'Remote-WSL' extension is installed in VS Code or install it using this link: <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl>
 
-Once you've confirmed your files transferred successfully and your projects are accessible, you can delete the blackcodher directory from your Windows user directory.
+Once you've confirmed your files transferred successfully and your projects are accessible, complete the following steps:
+
+1. Set the default directory for Terminal.
+   1. Open a Terminal window and click the ⌄ symbol in the tab strip at the top, then select "Settings".
+   2. In the sidebar, select "Ubuntu-20.04" under "Profiles" (you may have to scroll down in the sidebar to see the option).
+   3. Delete the value in the "Starting directory" text box and enter "/home/\<Ubuntu username>". If you're not sure what your username is, you can see it in any Ubuntu tab, which will display "\<Ubuntu username>@\<computer name>" by default.
+![Terminal Settings](terminal-settings.png)
+1. Delete the "blackcodher" root directory from your Windows drive.
 
 **NOTE**: You will need to run `npm install` for all projects the first time you run them as dependencies are _not_ copied to avoid the transfer time increasing by a magnitude.
 
